@@ -1,27 +1,17 @@
 {
-<<<<<<< HEAD
-  "name": "cluely-desktop",
-  "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "dependencies": {
-    "electron": "^32.0.0"
-=======
   "name": "axon",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev --turbo",
+    "build": "next build --turbo",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "^15.5.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -33,6 +23,6 @@
     "eslint-config-next": "15.5.4",
     "tailwindcss": "^4",
     "typescript": "^5"
->>>>>>> 9ef1743 (first commit)
   }
 }
+

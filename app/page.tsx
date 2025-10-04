@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import "../style/globals.css";
 
 export default function AxonLanding() {
   return (
@@ -12,11 +13,19 @@ export default function AxonLanding() {
         <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
           <h2 className="text-2xl font-bold text-indigo-700">Axon</h2>
           <div className="flex gap-6 text-gray-700 font-medium">
-            <a href="#hero" className="hover:text-indigo-600 transition">Home</a>
-            <a href="#features" className="hover:text-indigo-600 transition">Features</a>
-            <a href="#about" className="hover:text-indigo-600 transition">About</a>
+            <a href="#hero" className="hover:text-indigo-600 transition">
+              Home
+            </a>
+            <a href="#features" className="hover:text-indigo-600 transition">
+              Features
+            </a>
+            <a href="#about" className="hover:text-indigo-600 transition">
+              About
+            </a>
           </div>
-          <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full">Get Started</Button>
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full transition">
+            Get Started
+          </button>
         </div>
       </nav>
 
@@ -32,12 +41,13 @@ export default function AxonLanding() {
           Axon — Your Intelligent macOS Assistant
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          Axon reads your screen, understands intent, and executes tasks automatically.
-          Powered by Google Gemini for step-by-step macOS automation.
+          Axon reads your screen, understands intent, and executes tasks
+          automatically. Powered by Google Gemini for step-by-step macOS
+          automation.
         </p>
-        <Button className="px-6 py-3 text-lg rounded-full shadow-md bg-indigo-600 hover:bg-indigo-700">
-          Try Axon <ArrowRight className="ml-2 w-4 h-4" />
-        </Button>
+        <button className="flex items-center justify-center gap-2 px-6 py-3 text-lg rounded-full shadow-md bg-indigo-600 hover:bg-indigo-700 text-white transition">
+          Try Axon <ArrowRight className="w-4 h-4" />
+        </button>
       </motion.section>
 
       {/* Process Section */}
@@ -49,40 +59,17 @@ export default function AxonLanding() {
         className="grid md:grid-cols-5 gap-4 mt-20 w-full max-w-5xl"
       >
         {[
-          {
-            title: "User Input",
-            desc: "You type or speak your command to Axon.",
-          },
-          {
-            title: "Reads Screen",
-            desc: "Axon captures and interprets on-screen context.",
-          },
-          {
-            title: "Gemini Generates Plan",
-            desc: "Gemini creates a step-by-step automation plan.",
-          },
-          {
-            title: "Execution Engine",
-            desc: "Axon performs OS actions — clicks, types, and opens apps.",
-          },
-          {
-            title: "Follow-Up Options",
-            desc: "Axon displays results and suggests next actions.",
-          },
+          { title: "User Input", desc: "You type or speak your command to Axon." },
+          { title: "Reads Screen", desc: "Axon captures and interprets on-screen context." },
+          { title: "Gemini Generates Plan", desc: "Gemini creates a step-by-step automation plan." },
+          { title: "Execution Engine", desc: "Axon performs OS actions — clicks, types, and opens apps." },
+          { title: "Follow-Up Options", desc: "Axon displays results and suggests next actions." },
         ].map((step, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            className="flex flex-col items-center"
-          >
-            <Card className="rounded-2xl bg-white/80 backdrop-blur-md border-none shadow-lg text-center py-8 w-full">
-              <CardContent>
-                <h3 className="font-semibold text-xl mb-2 text-indigo-700">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm max-w-xs mx-auto">{step.desc}</p>
-              </CardContent>
-            </Card>
+          <motion.div key={index} whileHover={{ scale: 1.05 }} className="flex flex-col items-center">
+            <div className="rounded-2xl bg-white/80 backdrop-blur-md border-none shadow-lg text-center py-8 px-6 w-full">
+              <h3 className="font-semibold text-xl mb-2 text-indigo-700">{step.title}</h3>
+              <p className="text-gray-600 text-sm max-w-xs mx-auto">{step.desc}</p>
+            </div>
           </motion.div>
         ))}
       </motion.section>
@@ -91,7 +78,10 @@ export default function AxonLanding() {
       <section id="about" className="mt-32 max-w-3xl text-center text-gray-700">
         <h2 className="text-3xl font-bold mb-4 text-indigo-700">About Axon</h2>
         <p>
-          Axon bridges human intent and digital execution. It’s built for people who want their computers to understand them — not the other way around. By merging multimodal perception with generative reasoning, Axon expands accessibility and digital fluency.
+          Axon bridges human intent and digital execution. It’s built for people
+          who want their computers to understand them — not the other way
+          around. By merging multimodal perception with generative reasoning,
+          Axon expands accessibility and digital fluency.
         </p>
       </section>
 
